@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>SELECT VENDEDOR</h1>
+
+    <h3>Selecionar vendedor clicando no nome para iniciar as vendas!</h3>
+
+    <table>
+        <tr th:each="vendedor : ${vendedores}">
+            <td>Vendedor: <a  th:href="${(#mvc.url('VC#filtrarVendedorGet').arg(0, vendedor.idVendedor)).build()}"><span th:text="${vendedor.nomeVendedor}"></span></a></td>
+        </tr>
+    </table>
+
+    <button><a href="/"> Voltar tela inicial </a></button>
+    <button><a href="/registrarVendedor"> Registrar novo vendedor </a></button>
+    <button><a href="/visaoGeral"> Visão das vendas </a></button>
+</body>
+</html>

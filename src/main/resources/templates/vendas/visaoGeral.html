@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de vendas</title>
+</head>
+<body>
+
+<h1>VISAO GERAL</h1>
+
+    Selecionar intervalo de tempo:
+    <form method="post">
+        Dia inicial: <input type="text" name="inicio">
+        Dia final: <input type="text" name="fim">
+        <button type="submit">Fazer busca</button>
+    </form>
+
+    <div>
+        <button><a href="/"> Voltar tela inicial </a></button>
+    </div>
+</body>
+</html>
+
+/* conta o total de vendas e média das vendas
+SELECT count(ID_VENDA), AVG(VALOR_VENDA) FROM VENDA
+GROUP BY VENDEDOR_ID_VENDEDOR;
+*/

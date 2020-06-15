@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de vendas</title>
+</head>
+<body>
+    <h1>VISAO FILTRADA</h1>
+
+
+    <div th:each="vendas : ${vendas}">
+        <p>Nome: <span th:text="${vendas.vendedor.nomeVendedor}" ></span></p>
+        <p>Total de vendas: <span th:text="${vendas.dataVenda}"></span></p>
+        <p>Média de vendas diária: <span th:text="${vendas.valorVenda}" ></span></p>
+        <p>-----------------------------------</p>
+    </div>
+
+    <div>
+        <button><a href="/"> Voltar tela inicial </a></button>
+        <button><a href="/visaoGeral"> Fazer nova consulta </a></button>
+    </div>
+</body>
+</html>

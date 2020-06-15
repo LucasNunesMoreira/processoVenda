@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de vendas</title>
+</head>
+<body>
+    <h1>REALIZAR VENDA (DB)</h1>
+
+    <form method="post">
+        Data da venda: <input type="text" value="" name="dataVenda"/>
+        Valor da venda: <input type="text" value="" name="valorVenda"/>
+
+        <button type="submit">Salvar venda</button>
+    </form>
+
+    <button><a href="/"> Voltar tela inicial </a></button>
+    <button><a href="/selectVendedor"> Trocar vendedor </a></button>
+    <button><a href="/visaoGeral"> Fazer filtro das vendas </a></button>
+
+    </body>
+</html>
