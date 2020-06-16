@@ -13,8 +13,9 @@ public class Venda implements Serializable {
     private long idVenda;
     private String dataVenda;
     private double valorVenda;
-    @ManyToOne
-    private Vendedor vendedor;
+
+    private long idVendedor;
+    private  String nomeVendedor;
 
     public long getIdVenda() {
         return idVenda;
@@ -40,11 +41,19 @@ public class Venda implements Serializable {
         this.valorVenda = valorVenda;
     }
 
-    public Vendedor getVendedor() {
-        return vendedor;
+    public long getIdVendedor() {
+        return idVendedor;
     }
 
-    public void setNomeVendedor(Vendedor vendedor) {
-        this.vendedor = vendedor;
+    public void setIdVendedor(long idVendedor) {
+        this.idVendedor = idVendedor;
+    }
+
+    public String getNomeVendedor() {
+        return nomeVendedor;
+    }
+
+    public void setNomeVendedor(String nomeVendedor) {
+        this.nomeVendedor = nomeVendedor;
     }
 }

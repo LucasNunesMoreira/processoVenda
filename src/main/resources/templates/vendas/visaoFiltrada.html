@@ -10,38 +10,15 @@
 
 
     <div th:each="vendas : ${vendas}">
-        <p>Nome: <span th:text="${vendas.vendedor.nomeVendedor}" ></span></p>
-        <p>Total de vendas: <span th:text="${totalVendas}"></span></p>
-        <p>Média das vendas: <span th:text="${vendas.vendedor.nomeVendedor}" ></span></p>
+        <p>Nome vendedor: <span th:text="${vendas.nomeVendedor}" ></span></p>
+        <p>Valor da venda: <span th:text="${vendas.valorVenda}" ></span></p>
+        <p>Data da venda: <span th:text="${vendas.dataVenda}" ></span></p>
         <p>-----------------------------------</p>
     </div>
-
+    <p>Total de vendas: <span th:text="${totalVendas}"></span></p>
     <div>
         <button><a href="/"> Voltar tela inicial </a></button>
         <button><a href="/visaoGeral"> Fazer nova consulta </a></button>
     </div>
 </body>
 </html>
-
-<!--
-<div th:each="objetoFinal : ${objetoFinal}">
-    <p>Nome: <span th:text="${objetoFinal.nomeVendedor}" ></span></p>
-    <p>Total de vendas: <span th:text="${objetoFinal.totalVendas}"></span></p>
-    <p>Média de vendas diária: <span th:text="${objetoFinal.mediaDiaria}" ></span></p>
-    <p>-----------------------------------</p>
-</div>
-
-<div th:each="vendedor : ${vendedor}">
-    <p>Nome: <span th:text="${vendedor.nomeVendedor}" ></span></p>
-    <p>Total de vendas: <span th:text="${vendedor.nomeVendedor}"></span></p>
-    <p>Média de vendas diária: <span th:text="${vendedor.nomeVendedor}" ></span></p>
-    <p>-----------------------------------</p>
-</div>
-
-<div th:each="vendas : ${vendas}">
-    <p>Nome: <span th:text="${vendas.idVenda}" ></span></p>
-    <p>Total de vendas: <span th:text="${vendas.dataVenda}"></span></p>
-    <p>Média de vendas diária: <span th:text="${vendas.valorVenda}" ></span></p>
-    <p>-----------------------------------</p>
-</div>
--->

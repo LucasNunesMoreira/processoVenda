@@ -1,8 +1,10 @@
 package dev.lucas.procss.models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 public class Vendedor implements Serializable {
@@ -13,8 +15,7 @@ public class Vendedor implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idVendedor;
     private String nomeVendedor;
-    @OneToMany
-    private List<Venda> vendas;
+
 
     public long getIdVendedor() {
         return idVendedor;

@@ -58,7 +58,9 @@ public class VendedorController {
     @RequestMapping(value = "/{idVendedor}", method = RequestMethod.POST)
     public String filtrarVendedorPost(@PathVariable("idVendedor") long idVendedor, Venda venda) {
         Vendedor vendedor = vendedorReposit.findByidVendedor(idVendedor);
-        venda.setNomeVendedor(vendedor);
+        venda.setNomeVendedor(vendedor.getNomeVendedor());
+        venda.setIdVendedor(vendedor.getIdVendedor());
+
         vendaReposit.save(venda);
 
         return "redirect:/{idVendedor}";
@@ -78,13 +80,8 @@ public class VendedorController {
         Iterable<Venda> vendas = vendaReposit.findAllBydataVendaBetween(inicio, fim);
         mv.addObject("vendas", vendas);
 
-        //vendas = vendaReposit.findAllgroupByvendedor();
-
-        ArrayList<Long> totalVendas = vendaReposit.countBydataVendaBetween(inicio, fim);
+        ArrayList<String> totalVendas = vendaReposit.countBydataVendaBetween(inicio, fim);
         mv.addObject("totalVendas", totalVendas);
-
-        //long mediaVendas = vendaRepositfindAllBydataVendaBetween;
-        //mv.addObject("mediaVendas", mediaVendas);
 
         return mv;
     }
