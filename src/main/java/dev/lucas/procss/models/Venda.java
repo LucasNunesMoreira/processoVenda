@@ -1,7 +1,5 @@
 package dev.lucas.procss.models;
 
-import dev.lucas.procss.repository.VendaRepository;
-
 import javax.persistence.*;
 import java.io.Serializable;
 

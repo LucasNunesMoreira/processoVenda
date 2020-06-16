@@ -7,12 +7,11 @@
 </head>
 <body>
 
-<h1>VISAO GERAL</h1>
+    <h1>SELECAO DO INTERVALO DE TEMPO</h1>
 
-    Selecionar intervalo de tempo:
     <form method="post">
-        Dia inicial: <input type="text" name="inicio">
-        Dia final: <input type="text" name="fim">
+        Dia inicial: <input type="date" name="inicio">
+        Dia final: <input type="date" name="fim">
         <button type="submit">Fazer busca</button>
     </form>
 
@@ -22,7 +21,10 @@
 </body>
 </html>
 
-/* conta o total de vendas e média das vendas
+<!--
+conta o total de vendas e média do valor das vendas no intervalo de tempo
+
 SELECT count(ID_VENDA), AVG(VALOR_VENDA) FROM VENDA
+WHERE DATA_VENDA BETWEEN 'inicio' AND 'fim'
 GROUP BY VENDEDOR_ID_VENDEDOR;
-*/
+-->
